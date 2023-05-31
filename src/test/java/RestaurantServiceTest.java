@@ -47,5 +47,7 @@ class RestaurantServiceTest {
         restaurant.addToMenu("Item 1", 100);
         restaurant.addToMenu("Item 2", 200);
         restaurant.addToMenu("Item 3", 300);
+        int orderValue = restaurant.getOrderValue("Item 1", "Item 3");
+        assertEquals(400, orderValue);
     }
 }
