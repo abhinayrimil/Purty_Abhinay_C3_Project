@@ -42,4 +42,10 @@ class RestaurantServiceTest {
         service.addRestaurant("Pumpkin Tales", "Chennai", LocalTime.parse("12:00:00"), LocalTime.parse("23:00:00"));
         assertEquals(initialNumberOfRestaurants + 1, service.getRestaurants().size());
     }
+    @Test
+    public void getOrderValue_should_return_correct_total_price_for_selected_items() {
+        restaurant.addToMenu("Item 1", 100);
+        restaurant.addToMenu("Item 2", 200);
+        restaurant.addToMenu("Item 3", 300);
+    }
 }
